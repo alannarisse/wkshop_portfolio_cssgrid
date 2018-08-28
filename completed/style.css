@@ -104,6 +104,7 @@ p {
 .more {}
 
 blockquote {
+	margin-top: 40px;
 	quotes: "\201C""\201D""\2018""\2019";
 	font-weight: 300;
 }
@@ -133,4 +134,12 @@ ul.social {
 }
 .social a {
 	color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+	
+}
+
+@media only screen and (min-width: 1224px) {
+	
 }

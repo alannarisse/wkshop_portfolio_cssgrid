@@ -47,8 +47,6 @@ nav ul {
 	margin: 0;
 	padding: 10px;
 	list-style: none; 
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 nav li {
 	display: inline-block;
@@ -72,14 +70,9 @@ p {
 
 .portfolio {
 	max-width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 40px;
 }
 
 .feature {
-	grid-column-start: 1; 
-  	grid-column-end: 3;
 
 }
 
@@ -97,10 +90,9 @@ p {
 }
 
 .why {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 40px;
+
 }
+
 .more {}
 
 blockquote {
@@ -124,13 +116,18 @@ ul.social {
 	margin-top: 0;
 	padding-top: 40px;
 	list-style-type: none; 
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .social li {
-	display: inline-block;
 	color: #fff;
 }
 .social a {
 	color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+	
+}
+
+@media only screen and (min-width: 1224px) {
+	
 }
