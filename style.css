@@ -1,3 +1,10 @@
+/* styles for a css-grid workshop 
+* Brought to you by Alanna Risse
+* Thinkful mentor
+*/
+
+* {box-sizing: border-box;}
+
 body {
 	font-family: 'Ubuntu', sans-serif;
 	margin: 0 auto;
@@ -7,6 +14,11 @@ a {
 	color: #b4341a;
 	text-decoration: none;
 }
+
+a:hover {
+	color: #7e2514;
+}
+
 .a-style {color: #b4341a;}
 
 header {
@@ -29,23 +41,66 @@ header h2 {
 	text-shadow: 2px 2px 3px #333;
 }
 
+nav ul { 
+	width: 100%;
+	background-color: #333;
+	margin: 0;
+	padding: 10px;
+	list-style: none; 
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+nav li {
+	display: inline-block;
+	font-weight: 700;
+	text-align: center;
+}
+nav a { color: #fff; }
+nav a:hover { color: #fc5f40; }
+
 main {
-	background-color: #ccc;
 	padding: 60px;
+}
+
+main h2 {
+	margin-top: 60px;
 }
 
 p {
 	font-weight: 300;
 }
 
-.proj-thumb {
-	box-shadow: 2px 2px 5px #999;
+.portfolio {
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 40px;
 }
 
+.feature {
+	grid-column-start: 1; 
+  	grid-column-end: 3;
+
+}
+
+.proj-thumb {
+	box-shadow: 2px 2px 5px #999;
+	width: 100%;
+	height: auto;
+}
+
+.go-link:after {
+	content: ' \21D2';
+}
 .round {
 	border-radius: 50%;
 }
 
+.why {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 40px;
+}
 .more {}
 
 blockquote {
@@ -70,6 +125,7 @@ ul.social {
 	padding-top: 40px;
 	list-style-type: none; 
 	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .social li {
 	display: inline-block;
