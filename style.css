@@ -1,0 +1,80 @@
+body {
+	font-family: 'Ubuntu', sans-serif;
+	margin: 0 auto;
+}
+
+a {
+	color: #b4341a;
+	text-decoration: none;
+}
+.a-style {color: #b4341a;}
+
+header {
+	padding: 60px;
+	height: 300px;
+	background-image: url('https://picsum.photos/1200/320/');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: 50%;
+	color: #fff;
+}
+
+header h1 {
+	font-size: 48px;
+	font-weight: 400;
+}
+
+header h2 {
+	font-weight: 400;
+	text-shadow: 2px 2px 3px #333;
+}
+
+main {
+	background-color: #ccc;
+	padding: 60px;
+}
+
+p {
+	font-weight: 300;
+}
+
+.proj-thumb {
+	box-shadow: 2px 2px 5px #999;
+}
+
+.round {
+	border-radius: 50%;
+}
+
+.more {}
+
+blockquote {
+	quotes: "\201C""\201D""\2018""\2019";
+	font-weight: 300;
+}
+
+blockquote:before {
+	content: open-quote;
+}
+blockquote:after {
+	content: close-quote;
+}
+
+footer {
+	background-color: #333;
+	height: 120px;
+}
+ul.social { 
+	width: 100%;
+	margin-top: 0;
+	padding-top: 40px;
+	list-style-type: none; 
+	display: grid;
+}
+.social li {
+	display: inline-block;
+	color: #fff;
+}
+.social a {
+	color: #fff;
+}
