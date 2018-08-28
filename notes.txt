@@ -1,0 +1,62 @@
+Noted on css grid
+
+
+CSS-grid is a two-dimensional grid system, whereas flexbox is one-dimension.
+
+// To make css grid happen, you need:
+display: grid;
+
+// use fractions
+grid-template-columns:  1fr 1fr 1fr 1fr;
+
+//or use percentages
+grid-template-columns:  70% 30%
+
+// or use repeat:
+grid-template-columns: repeat(4, 1fr)
+grid-template-columns: repeat(4, 1fr 2fr)
+
+// to add a gap
+grid-column-gap: 1em (or 25px etc)
+grid-row-gap: 1em;
+grid-gap: 1em; (both column and row)
+
+// auto set the rows to certain height
+grid-auto-rows: 100px;
+grid-auto-rows: minmax(100px, auto);
+
+// nesting. just add a new display: grid
+
+//justify
+justify-items: stretch; // default
+align-items: start;
+align-self: start;
+justify-self: end;
+
+
+// stretch things
+grid-column: 1/3;
+grid-row: 1/3;
+
+
+// order
+.grid div:nth-child(4) {
+	order: 1;
+}
+.grid div:nth-child(2) {
+	order: 2;
+}
+
+// auto fill columns with certain width. stays flexible and responsive!
+display: grid;
+grid-template-columns: repeat(auto-fill, 150px);
+//even better. this makes it more flexy
+grid-template-columns: repeat(auto-fill, minmax(150px,1fr
+
+// auto-fit will stretch and not draw empty columns
+
+
+// spanning multiple columns
+grid-column-end: span 2;
+grid-row-end: span 2;
+grid-auto-flow: dense;
