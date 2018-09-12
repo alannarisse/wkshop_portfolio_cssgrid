@@ -48,10 +48,9 @@ nav ul {
 	padding: 10px;
 	list-style: none; 
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(4, 1fr);
 }
 nav li {
-	display: inline-block;
 	font-weight: 700;
 	text-align: center;
 }
@@ -73,13 +72,17 @@ p {
 .portfolio {
 	max-width: 100%;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 40px;
+	grid-template-columns: 1fr;
 }
 
+.portfolio article:nth-child(7){
+	order: 1;
+}
+
+.portfolio article {background-color: #ccc;}
+
+
 .feature {
-	grid-column-start: 1; 
-  	grid-column-end: 3;
 
 }
 
@@ -88,6 +91,15 @@ p {
 	width: 100%;
 	height: auto;
 }
+
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 2fr;
+	grid-gap: 1em;
+}
+
+.grid div {border: 1px solid #333;}
 
 .go-link:after {
 	content: ' \21D2';
@@ -98,14 +110,16 @@ p {
 
 .why {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 40px;
-	align-items: center;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.why article {
+	text-align: center;
+
 }
 .more {}
 
 blockquote {
-	margin-top: 40px;
 	quotes: "\201C""\201D""\2018""\2019";
 	font-weight: 300;
 }
@@ -120,6 +134,7 @@ blockquote:after {
 footer {
 	background-color: #333;
 	height: 120px;
+
 }
 ul.social { 
 	width: 100%;
@@ -127,10 +142,9 @@ ul.social {
 	padding-top: 40px;
 	list-style-type: none; 
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(4, 1fr);
 }
 .social li {
-	display: inline-block;
 	color: #fff;
 }
 .social a {
@@ -138,9 +152,28 @@ ul.social {
 }
 
 @media only screen and (min-width: 768px) {
+	.portfolio {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 1em;
+	}
+	.portfolio article:nth-child(1) {
+		grid-column: 1 / 3;
+		grid-row: 1 / 3;
+	}
 	
 }
 
 @media only screen and (min-width: 1224px) {
+
+	.portfolio {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 1em;
+	}
+	.portfolio article:nth-child(1) {
+		grid-column: 2 / 4;
+		grid-row: 2 / 4;
+	}
 	
 }
